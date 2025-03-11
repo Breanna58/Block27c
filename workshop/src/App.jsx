@@ -1,6 +1,8 @@
 // Import the React library, which allows us to define components
+import react from "@vitejs/plugin-react-swc";
 
 // Import the Players component, which we'll use to show a list of players
+ import Players from "./features/players/Players";
 
 // Define the App component
 function App() {
@@ -9,8 +11,10 @@ function App() {
   return (
     <section>
       <h1>Puppy Players</h1>
+      <Players /> {}
     </section>
   );
 }
 
 // Export the App component as the default export
+export default App; 

@@ -14,21 +14,11 @@ export const puppyBowlApi = createApi({
   // Define endpoints for our API service
   endpoints: (builder) => ({
     // Define an endpoint that fetches players
-   getPuppies: builder.query({
-    query: () => "/players", 
-
-
-   })
-   
-
-
-
-    })
-      // The part of the URL that comes after the baseUrl for this specific endpoint
-      
+    getPuppies: builder.query({
+      query: () => "/players",
     }),
-
+  }), // <-- Removed misplaced `})` here
+});
 
 // Export hooks for each endpoint - in this case, a React hook that triggers the fetchPlayers query
-
-export const { useGetPuppiesQuery } = puppyBowlApi; 
+export const { useGetPuppiesQuery } = puppyBowlApi;
